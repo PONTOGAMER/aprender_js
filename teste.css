@@ -1,0 +1,331 @@
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black
+}
+body{
+    background-color:rgba(169, 152, 245, 0.993);
+    margin: 0px; 
+}
+#main_buttons{
+    top: 20%;
+    position: absolute;
+
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+#main_buttons a{
+
+    /*to be ajusted*/
+    width: 200px;
+    height: 75px;
+    margin: 10px; 
+    border-radius: 25px;
+    font-size: larger;
+
+
+
+    background-color: white;
+    
+    
+    /*Align to both centers    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: black
+
+}
+
+#final_buttons {
+    top: 75%;
+    position: absolute;
+
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    
+}
+#final_button{
+    /*to be ajusted*/
+    width: 250px;
+    height: 75px;
+    margin: 10px; 
+    border-radius: 25px;
+    font-size: larger;
+
+
+
+    display:block;
+    background-color: white;
+    
+    
+    /*Align to both centers    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: black
+}
+
+
+
+#nav_bar{
+    position: absolute;
+    top: 0px; 
+    height:50px; 
+    margin: 0px;
+    width: 100%;
+    background-color: white;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+.page_buttons{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px; 
+    margin: 0px; 
+    font-size: larger;
+
+    display:block;
+    background-color: white;
+    
+    
+    /*Align to both centers    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: black
+}
+
+
+
+#rodape{
+    position: absolute;
+    bottom: 0px; 
+    height:50px; 
+    margin: 0px;
+    width: 100%;
+    background-color: white;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#connections_space{
+    position: absolute; 
+
+    /* to be ajusted */
+    top: 20vh;
+
+
+
+    justify-self: center;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.connections_buttons{
+    background-color:rgb(249, 246, 246);
+    color: black;
+    margin: 2px;
+    width: 110px;
+    height: 80px;
+    border-radius: 15px;
+    /*buttons are centered in the middle of each grid cell */
+    justify-self: center; 
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in-out; 
+}
+
+.connections_buttons_selected{
+    background-color:rgb(75, 73, 73);
+    color: white;
+    margin: 2px;
+    width: 110px;
+    height: 80px;
+    border-radius: 15px;
+    /*buttons are centered in the middle of each grid cell */
+    justify-self: center; 
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in-out; 
+
+}
+
+@keyframes animation_temp{
+    
+    from{    
+        width: 110px;
+        height: 80px;}
+    50%{
+        width: 100px;
+        height: 70px;
+    }
+    to{
+        width: 110px;
+        height: 80px;        
+    }
+}
+
+.connections_select_animation{
+    animation-name: animation_temp; 
+
+    animation-duration: 400ms;
+}
+
+.disabled_button{
+    pointer-events: none !important;
+}
+
+#connections_bottom_buttons{
+    position: absolute; 
+    top: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+#connections_shuffle_button{
+    width: 200px;
+    height: 75px;
+    margin: 10px; 
+    border-radius: 25px;
+    font-size: larger;
+    background-color: white;
+    /*Align to both centers    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: black; 
+}
+
+#connections_submit{
+    width: 200px;
+    height: 75px;
+    margin: 10px; 
+    border-radius: 25px;
+    font-size: larger;
+    background-color: gray;
+    /*Align to both centers    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    pointer-events: none;
+}
+.connections_solved_cat{
+    width: 456px; 
+    height: 80px; 
+    border-radius: 15px;
+
+    grid-column: 1/5;
+
+
+    justify-self: center; 
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#connections_text_coiso{
+    position:absolute;
+    top: 9%; 
+    font-size: x-large;
+    color:white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    display: none;
+    justify-self:center;
+}
+
+#connections_imagem{
+    position:absolute;
+    top: 20%;
+    margin:auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    display: none;
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+#crosstunes_space{
+    position: absolute; 
+
+    /* to be ajusted */
+    top: 20vh;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+
+
+    justify-self: center;
+    display: grid; 
+}
+.crosstunes_empty_cell{
+    width: 30px;
+    height: 30px;
+}
+.crosstunes_normal_cell{
+    /*to be changed*/
+    width: 28px !important;
+    height: 28px !important;
+    border: 1px, solid, black;
+    padding: 0;
+    background-color: white;
+    font-weight: 600;
+
+    text-align: center;
+    font-size: medium;
+    
+}
