@@ -63,6 +63,28 @@ function crosstunes_create_boxes(){
 }
 
 
-function crosstunes_check(){
-    const elems = document.getElementsByClassName("");
+async function crosstunes_check(){
+    const audio = new Audio('cat-laughing-at-you.mp3');
+    const elems = document.getElementsByClassName("crosstunes_normal_cell");
+    let correct = true; 
+    for(let e of elems){
+        if(e.value != grid[parseInt(e.id)]){
+            e.style.color = "Red";
+            correct = false;
+        }
+    }
+    if (correct){
+        finish(2);
+    }else{
+        audio.play();
+        const img = document.getElementById("imagem");
+        img.style.display = "block"; 
+        
+        await sleep(100) 
+        img.style.opacity = "0";
+
+        await sleep(3000)
+        img.style.display = "none"; 
+        img.style.opacity = 1;
+    }
 }

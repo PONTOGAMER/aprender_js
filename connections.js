@@ -181,7 +181,7 @@ function connections_click_button(b, animate = false){
         }else{
             
             audio.play();
-            const img = document.getElementById("connections_imagem");
+            const img = document.getElementById("imagem");
             img.style.display = "block"; 
             
             await sleep(100) 
