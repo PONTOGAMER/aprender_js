@@ -10,6 +10,7 @@ button {
 
 
 
+
 p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:black
@@ -145,13 +146,15 @@ body{
 }
 
 #connections_space{
-    position: absolute; 
+    position: fixed;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: -15%;
+    bottom: 0px;
 
-    /* to be ajusted */
-    top: 20vh;
 
-
-
+    align-self: center;
     justify-self: center;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -216,12 +219,16 @@ body{
 }
 
 #connections_bottom_buttons{
-    position: absolute; 
-    top: 70vh;
+    position: fixed;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 55%;
+    bottom: 0px;
+    height:80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-self: center;
 }
 #connections_shuffle_button{
     width: 200px;
@@ -275,8 +282,12 @@ body{
 }
 
 #connections_text_coiso{
-    position:absolute;
-    top: 9%; 
+    position: fixed;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: -25%;
+    bottom: 0px;
     font-size: x-large;
     color:white;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -301,10 +312,15 @@ body{
 }
 
 #crosstunes_space{
-    position: absolute; 
-
+    position: fixed;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: -50px;
+    bottom: 0px; 
+    height:360px;
+    width:360;
     /* to be ajusted */
-    top: 20vh;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(12,1fr);
 
@@ -320,7 +336,8 @@ body{
     /*to be changed*/
     width: 28px !important;
     height: 28px !important;
-    border: 1px, solid, black;
+    border: 1px solid black;
+    outline: none;
     padding: 0;
     background-color: white;
     font-weight: 600;
@@ -328,4 +345,7 @@ body{
     text-align: center;
     font-size: medium;
     
+}
+.crosstunes_normal_cell:focus{
+    background-color: yellow !important;
 }
