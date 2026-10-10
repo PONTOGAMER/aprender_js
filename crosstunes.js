@@ -13,10 +13,14 @@ const grid = [  ' ','A','A','A','A','A','A','A','A','A',' ',' ',
                 ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
  ]
 const size = 12; 
+const sounds_source = ["cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3"]
 const sounds = [];
-const tips = [];
+for(i = 0; i<sounds_source.length; i++){
+    sounds.push(new Audio(sounds_source[i]));
+}
+const tips = ["1 blablablaemhjwlhwrkl hjwlkrhjwlkhjwlehjlwj","2 blablabla"];
 const prototype_words = [[1, 0, 9], [4,1, 10]]; //first number is start index, second number is 0 for horizontal word and 1 for vertical, third number is length
-const colors = ["Red","Red"];
+const colors = ["Green","Red"];
 const words = [];
 prototype_words.forEach((word)=>{
     let temp = [];
@@ -26,8 +30,9 @@ prototype_words.forEach((word)=>{
     words.push(temp);
 })
 
-var cur_word = -1; 
+var cur_word = 1; 
 var cur_dir = -1; 
+var audio_timeout;
 // when clicking backspace focus previous element, only in current word
 function crosstunes_input(v) {
     v.style.color = "Black";
@@ -126,13 +131,40 @@ function crosstunes_create_boxes(){
                 }
             })
 
+
         }
         document.getElementById("crosstunes_space").appendChild(v);
     }
     crosstunes_change_word(0);
     const v = document.getElementById(words[0][0]); 
     v.focus();
+    const prev = document.getElementById("crosstunes_previous"); 
+    prev.addEventListener("click",()=>{
 
+        crosstunes_change_word((cur_word-1 + words.length)%words.length)
+        const next = document.getElementById(words[cur_word][0]); 
+        next.focus()
+    })
+    const next_song = document.getElementById("crosstunes_next"); 
+    next_song.addEventListener("click",()=>{
+        crosstunes_change_word((cur_word+1)%words.length)
+        const next = document.getElementById(words[cur_word][0]); 
+        next.focus()
+    })
+    const play = document.getElementById("crosstunes_play"); 
+
+
+    play.addEventListener("mousedown",(event)=>{
+        play.style.backgroundImage = "url('pause.png')";
+
+        sounds[cur_word].pause();
+        sounds[cur_word].currentTime = 0; 
+        sounds[cur_word].play();
+        audio_timeout = setTimeout(()=>{
+            play.style.backgroundImage = "url('play.png')";
+        },sounds[cur_word].duration *1000)
+        event.preventDefault();
+    })
 }
 
 
@@ -166,7 +198,14 @@ async function crosstunes_check(){
 function crosstunes_change_word(word){
     
     if(word != cur_word){
+        clearTimeout(audio_timeout)
+        const play = document.getElementById("crosstunes_play");
+        play.style.backgroundImage = "url('play.png')"
+        sounds[cur_word].pause();
+        sounds[cur_word].currentTime = 0;
+
         cur_word = word;
+ 
         cur_dir = prototype_words[cur_word][1];
         const elems = document.getElementsByClassName("crosstunes_normal_cell");
         for(const e of elems){
@@ -176,5 +215,10 @@ function crosstunes_change_word(word){
             const v = document.getElementById(i);
             v.style.backgroundColor = colors[cur_word];
         })
+        //change button variables...
+        const tip = document.getElementById("crosstunes_tip")
+        tip.innerHTML = tips[cur_word]
+
+
     }
 }

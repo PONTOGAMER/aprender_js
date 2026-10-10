@@ -349,3 +349,64 @@ body{
 .crosstunes_normal_cell:focus{
     background-color: yellow !important;
 }
+#crosstunes_buttons_div{
+    top: 65%;
+    position: absolute;
+
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+#crosstunes_buttons_box{
+    /*to be ajusted*/
+    width: 450px;
+    height: 75px;
+    margin: 10px; 
+    border-radius: 25px;
+    font-size: larger;
+
+
+
+    display:block;
+    background-color: white;
+    
+    
+    /*Align to both centers    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#crosstunes_tip{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width:200px;
+    font-size:medium;
+
+}
+#crosstunes_previous{
+    margin: 5px;
+    display:inline;
+    width: 30px;
+    height:30px;
+    background-image: url("previous.png");
+    background-size: 31px 31px;
+}
+#crosstunes_play{
+    margin: 5px;
+    display:inline;
+    width: 30px;
+    height:30px;
+    background-image: url("play.png");
+    background-size: 31px 31px;
+    
+}
+#crosstunes_next{
+    margin: 5px;
+    display:inline;
+    width: 30px;
+    height:30px;
+    background-image: url("next.png");
+    background-size: 31px 31px;
+}
