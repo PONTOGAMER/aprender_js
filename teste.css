@@ -410,3 +410,14 @@ body{
     background-image: url("next.png");
     background-size: 31px 31px;
 }
+#crosstunes_check{
+    margin: 5px;
+    padding: 5px;
+    display:inline;
+    height: 30px;
+
+    border-radius: 30px;
+    color: white;
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -12,6 +12,9 @@ const grid = [  ' ','A','A','A','A','A','A','A','A','A',' ',' ',
                 ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
                 ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
  ]
+
+
+ //sindrome de cidade pequena, du biskutgenug, rap god, alguma white girl music, 
 const size = 12; 
 const sounds_source = ["cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3"]
 const sounds = [];
@@ -70,7 +73,7 @@ function crosstunes_move(v, dir){
     
 }
 
-function crosstunes_create_boxes(){
+async function crosstunes_create_boxes(){
     for(i= 0; i < grid.length; i++){
         let v; 
         if(grid[i] == ' '){
@@ -155,16 +158,23 @@ function crosstunes_create_boxes(){
 
 
     play.addEventListener("mousedown",(event)=>{
-        play.style.backgroundImage = "url('pause.png')";
+        if(play.style.backgroundImage == 'url("pause.png")'){
+            clearTimeout(audio_timeout)
+            sounds[cur_word].pause();
+            sounds[cur_word].currentTime = 0; 
+            play.style.backgroundImage = "url('play.png')";
+        }else{
 
-        sounds[cur_word].pause();
-        sounds[cur_word].currentTime = 0; 
-        sounds[cur_word].play();
+            play.style.backgroundImage = "url('pause.png')";
+            sounds[cur_word].play();
         audio_timeout = setTimeout(()=>{
             play.style.backgroundImage = "url('play.png')";
         },sounds[cur_word].duration *1000)
+        }
         event.preventDefault();
     })
+    const check = document.getElementById("crosstunes_check");
+    check.addEventListener("click", crosstunes_check);
 }
 
 
@@ -181,6 +191,7 @@ async function crosstunes_check(){
     }
     if (correct){
         finish(2);
+        alert("RESOLVIDO");
     }else{
         audio.play();
         const img = document.getElementById("imagem");
