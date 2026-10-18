@@ -3,10 +3,10 @@
 
 const connections_base_words = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'] /* Since connections_words is altered, map has to stay the same, so its easier to maintain the original words also */
 
-// Sinónimo de dinis: drama queen, vini, condições, rapxin?? 
-// Cenas desagradaveis de se menciionar: jogo, 67, aura, 
-// 
-// A ver com nomes de professores secundario?: 
+// Sinónimo de dinis: drama queen, vini, condições, rapxin
+// Cenas desagradaveis de se menciionar: jogo, 67, aura, cringe?, ex?
+// Partes do menu de criação de personagens The Sims: nome, idade, voz, andar
+// A ver com nomes de professores secundario: amando, calos, lisão, aula
 
 
 
