@@ -15,7 +15,7 @@ const grid = [  ' ','A','A','A','A','A','A','A','A','A',' ',' ',
 
 
  //sindrome de cidade pequena, du biskutgenug, rap god, alguma white girl music, video do almeida (quem está a cantar), 
- //musica do quim barreiros, musica daquele video de gandia?, alguma musica do espama, musica unicamente instrumental, musica cujo nome é inês (nome da musica)
+ //musica do quim barreiros, musica daquele video de gandia?, alguma musica do espama, musica unicamente instrumental, musica cujo nome é inês (nome da musica) meh?, video do pirinha (autor...), aquela musica do natal que tao sempre a pedir no grupo
 const size = 12; 
 const sounds_source = ["cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3"]
 const sounds = [];
