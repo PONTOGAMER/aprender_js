@@ -33,13 +33,26 @@ prototype_words.forEach((word)=>{
     }
     words.push(temp);
 })
-
+var saved_grid;
+if(localStorage.getItem("crosstunes_saved_grid") === null){
+    saved_grid = Array(grid.length);
+    for(i = 0; i < grid.length; i++){
+        saved_grid[i] = '';
+    };
+}else{
+    console.log("ola")
+    saved_grid = JSON.parse(localStorage.getItem("crosstunes_saved_grid"));
+}
 var cur_word = 1; 
 var cur_dir = -1; 
 var audio_timeout;
 // when clicking backspace focus previous element, only in current word
 function crosstunes_input(v) {
+    console.log("ola")
+    saved_grid[parseInt(v.id)] = v.value;
+    localStorage.setItem("crosstunes_saved_grid", JSON.stringify(saved_grid))
     v.style.color = "Black";
+
     if (v.value.length === 1){
 
         if (!crosstunes_move(v, (4 -cur_dir)%4)){
@@ -87,6 +100,7 @@ async function crosstunes_create_boxes(){
             v.type = "text";
             v.maxLength = 1;
             v.style.textTransform = "uppercase"; 
+            v.value = saved_grid[i];
             //prototype
             v.addEventListener("keydown", (event) => {
                 // Only handle normal character input

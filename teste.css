@@ -12,7 +12,7 @@ button {
 
 
 p{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
     color:black
 }
 body{
@@ -49,7 +49,7 @@ body{
     align-items: center;
 
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
     font-weight: bold;
     color: black
 
@@ -85,7 +85,7 @@ body{
     align-items: center;
 
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
     font-weight: bold;
     color: black
 }
@@ -107,13 +107,13 @@ body{
 
 } 
 .page_buttons{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     height: 50px; 
     margin: 0px; 
-    font-size: larger;
+    font-size: large;
 
-    display:block;
+
     background-color: white;
     
     
@@ -123,7 +123,7 @@ body{
     align-items: center;
 
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
     font-weight: bold;
     color: black
 }
@@ -164,8 +164,8 @@ body{
     background-color:rgb(249, 246, 246);
     color: black;
     margin: 2px;
-    width: 110px;
-    height: 80px;
+    width: 90px;
+    height: 70px;
     border-radius: 15px;
     /*buttons are centered in the middle of each grid cell */
     justify-self: center; 
@@ -180,8 +180,8 @@ body{
     background-color:rgb(75, 73, 73);
     color: white;
     margin: 2px;
-    width: 110px;
-    height: 80px;
+    width: 90px;
+    height: 70px;
     border-radius: 15px;
     /*buttons are centered in the middle of each grid cell */
     justify-self: center; 
@@ -196,15 +196,15 @@ body{
 @keyframes animation_temp{
     
     from{    
-        width: 110px;
-        height: 80px;}
+        width: 90px;
+        height: 70px;}
     50%{
-        width: 100px;
-        height: 70px;
+        width: 80px;
+        height: 60px;
     }
     to{
-        width: 110px;
-        height: 80px;        
+        width: 90px;
+        height: 70px;        
     }
 }
 
@@ -243,7 +243,7 @@ body{
     align-items: center;
 
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
     font-weight: bold;
     color: black; 
 }
@@ -261,14 +261,14 @@ body{
     align-items: center;
 
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
     font-weight: bold;
     color: black;
     pointer-events: none;
 }
 .connections_solved_cat{
-    width: 456px; 
-    height: 80px; 
+    width: 380px; 
+    height: 70px; 
     border-radius: 15px;
 
     grid-column: 1/5;
@@ -360,7 +360,7 @@ body{
 }
 #crosstunes_buttons_box{
     /*to be ajusted*/
-    width: 450px;
+    width: 380px;
     height: 75px;
     margin: 10px; 
     border-radius: 25px;
@@ -380,9 +380,10 @@ body{
 }
 #crosstunes_tip{
     color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
     width:200px;
     font-size:medium;
+    margin-left: 5px;
 
 }
 #crosstunes_previous{
@@ -391,7 +392,8 @@ body{
     width: 30px;
     height:30px;
     background-image: url("previous.png");
-    background-size: 31px 31px;
+    background-size: 29px 29px;
+    background-position: center;
 }
 #crosstunes_play{
     margin: 5px;
@@ -399,7 +401,8 @@ body{
     width: 30px;
     height:30px;
     background-image: url("play.png");
-    background-size: 31px 31px;
+    background-size: 29px 29px;
+    background-position: center;
     
 }
 #crosstunes_next{
@@ -408,7 +411,8 @@ body{
     width: 30px;
     height:30px;
     background-image: url("next.png");
-    background-size: 31px 31px;
+    background-size: 29px 29px;
+    background-position: center;
 }
 #crosstunes_check{
     margin: 5px;
@@ -419,5 +423,206 @@ body{
     border-radius: 30px;
     color: white;
     background-color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
+}
+
+#fermi_main_div{
+    top: 12%;
+    position: absolute;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#fermi_main_box{
+    width: 380px;
+    height: 550px;
+    margin: 10px; 
+    border-radius: 25px;
+    font-size: larger;
+
+
+    transition: all 300ms ease-in-out; 
+    /*Align to both centers    */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+}
+#fermi_mini_nav_bar{
+    width: 100vw;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    height:30px;
+    margin-top:5px;
+
+}
+.fermi_nav_bar_content{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    user-select:none;
+    cursor: pointer;
+}
+#fermi_question{
+    width:100vw;
+    /*display is difined in javascript*/
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height:150px;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
+    font-weight: bolder;
+    color:white;
+}
+#fermi_guess_box{
+    
+    /*display is difined in javascript*/
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 30px;
+    height:100px;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    text-decoration: none;
+    font-size:50px;
+    width:80%;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
+    font-weight: bolder;
+    color:black;
+ 
+    border: 1px solid black;
+    outline: none;
+}
+
+#fermi_submit{
+    position: absolute;
+    /*display is difined in javascript*/
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 3px;
+    justify-self:flex-end;
+    align-self: flex-end;
+
+    font-size: larger;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
+    font-weight: bolder;
+    background-color: lightgray;
+    justify-items: center;
+}
+#fermi_compare_numbers{
+    margin-top: 30px;
+    margin-left: 2.5%;
+    margin-right:2.5%;
+    border-radius: 30px;
+    height:200px;
+    justify-content: center;
+
+    align-items: center;
+    text-decoration: none;
+    width:95%;
+    flex-direction: column;
+ 
+}
+.fermi_number{
+    border-radius: 30px;
+    height:100px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    
+    
+    width:90%;
+
+    
+    /*to be ajusted*/
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
+    font-weight: bolder;
+    color:black;
+    border: 1px solid black;
+    outline: none;
+    text-decoration: none;
+    font-size:40px;
+}
+
+#fermi_graph{
+    width:95%;
+    height:200px;
+    grid-template-columns: repeat(22,1fr); /*the last element is empty, making it simetrical*/
+    align-items:end;
+}
+.fermi_graph_bar{
+    outline:none;
+    width: 90%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: height 1000ms ;
+    display: flex;
+}
+#fermi_graph_line{
+    position:absolute;
+    background-color: yellow;
+    width:0.5%;
+    transition: height 1000ms ;
+}
+#fermi_calculator{
+    position: absolute;
+    /*display is difined in javascript*/
+    margin-bottom: 40px;
+    margin-right: 300px;
+    border-radius: 10px;
+    padding: 3px;
+    justify-self:flex-end;
+    align-self: flex-end;
+
+    font-size: larger;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
+    font-weight: bolder;
+    background-color: lightgray;
+    justify-items: center;
+}
+
+#fermi_final_score{
+    width:100%;
+    margin-top:70px;
+    
+    /*to be ajusted*/
+    font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
+    font-weight: bolder;
+    color:black;
+    outline: none;
+    text-decoration: none;
+    font-size:100px;
+        display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#fermi_meme_final_image{
+    width:100%;
+    height:auto;
+    justify-content: center;
+    justify-self: center;
+}
+#fermi_meme_final_image img{
+    height:250px;
 }

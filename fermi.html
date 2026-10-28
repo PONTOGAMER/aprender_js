@@ -3,21 +3,48 @@
 <html lang = "en">
 <head>
     <script src="main.js"></script>
+    <script src="fermi.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connections</title>
     <link rel = "stylesheet" href="teste.css">
 </head>
-<body>
+<body onload = "fermi_start()">
     <div id = "nav_bar">
         <a class = page_buttons href = "main.html">🏠</a>
         <a class = page_buttons href = "connections.html"> CONNECTIONS  </a>
         <a class = page_buttons href = crosstunes.html> CROSSTUNES </a>
         <a class = page_buttons style = "background-color:rgb(170, 170, 170)"> FERMI </a>
     </div>
+    <img id="imagem" src = "52284-cat-laughing-at-you.png"></img>
+    <div id = "fermi_main_div">
+        <div id = "fermi_main_box">
+            <div id = "fermi_mini_nav_bar">
+                <b id = "fermi_tab_1" class = "fermi_nav_bar_content" >Q1</b>
+                <b id = "fermi_tab_2" class = "fermi_nav_bar_content">Q2</b>
+                <b id = "fermi_tab_3" class = "fermi_nav_bar_content">Q3</b>
+            </div>
 
-    <div id = "final_buttons">
-        <button onclick =  "finish(3)" id = "final_button">_ _ _ _ _ _</a>
+            <div id = "fermi_question" class = "hideable"></div>
+
+            <input id = "fermi_guess_box" class = "hideable" maxlength = 11></input>
+            <b id = "fermi_submit">Submit</b>
+            <div id = "fermi_compare_numbers" class = "hideable">
+                <div id = "fermi_guess" class = "fermi_number"></div>
+                <div id = "fermi_answer" class = "fermi_number"></div>
+                <div id = "fermi_ratio" class = "fermi_number"></div>
+
+            </div>
+                
+            <div id = "fermi_graph" class = "hideable">
+
+            </div>
+            <b id = "fermi_calculator" class = "hideable">Calc</b>
+            <div id = "fermi_final_score" class = "hideable"></div>
+            <div id = "fermi_meme_final_image" class = "hideable" >
+                <img src="52284-cat-laughing-at-you.png"></img>
+            </div>
+        </div>
     </div>
     <div id = "rodape">
         <p> BLABLABLA cenas que normalmente estariam num rodape</p>
