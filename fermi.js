@@ -1,8 +1,9 @@
 
-const questions = ["teste1", "número de reels já enviados pelo email para o grupo 'tocar nos menores'", "perdiojogo"];
+const questions = ["Quantas chamadas é que o Afonso tem que com o Dinis desde de 19 de Janeiro de 2026 até 28 de Outubro de 2026", "Número de reels já enviados para o grupo 'Tocar nos menores'", "Cena sobre professor"];
 
+var changing = false;
 
-const answers = [1, 2, 10000];
+const answers = [602, 2, 10000];
 
 const colors = ["red", "orange", "green","white"];
 const contrast_color = ["darkred", "brown", "darkgreen", "gray"];
@@ -11,7 +12,7 @@ const next_button = ["Pergunta 2", "Pergunta 3", "Resultados"];
 
 var cur_displayed = 0;
 var stats = [-1,-1,-1];
-
+var intervalId;
 function fermi_start(){
     const audio = new Audio('cat-laughing-at-you.mp3');
 
@@ -66,6 +67,7 @@ function fermi_start(){
 
     }
 function fermi_display(anim){
+    clearInterval(intervalId)
     localStorage.setItem("cur_displayed", cur_displayed);
     localStorage.setItem("stats", JSON.stringify(stats));
     const base = document.getElementById("fermi_main_box");
@@ -141,7 +143,6 @@ function fermi_display(anim){
         }
     }
 
-
 }
 
 function fermi_validate_guess(){
@@ -211,7 +212,7 @@ function number_smooth_transition(elem, time, start, end, digits, beforeText, af
     intervalId = setInterval(()=>{
         elem.innerHTML = beforeText + start.toFixed(digits) + afterText;
         start += step; 
-        if(start>= end){
+        if(start>= end){ 
             elem.innerHTML = beforeText + end.toFixed(digits) + afterText
             clearInterval(intervalId);
         }

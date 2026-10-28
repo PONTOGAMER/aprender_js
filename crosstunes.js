@@ -1,22 +1,23 @@
 
-const grid = [  ' ','A','A','A','A','A','A','A','A','A',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ','A',' ',' ',' ',' ',' ',' ',' ',
+const grid = [  'S','I','N','D','R','O','M','E',' ',' ',' ',' ',
+                ' ',' ',' ',' ','U',' ',' ','M',' ',' ',' ',' ',
+                ' ',' ','A',' ','N',' ',' ','I',' ',' ',' ',' ',
+                ' ',' ','L',' ','A',' ',' ','N',' ',' ',' ',' ',
+                ' ',' ','D',' ','W',' ',' ','E',' ',' ',' ',' ',
+                ' ',' ','E',' ','A',' ',' ','M',' ',' ',' ',' ',
+                ' ',' ','I',' ','Y',' ',' ',' ',' ',' ',' ',' ',
+                ' ',' ','D',' ',' ',' ',' ',' ',' ',' ',' ',' ',
+                ' ','T','A','B','L','E','T','O','P','S',' ',' ',
+                ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
                 ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
                 ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
  ]
 
 
- //sindrome de cidade pequena, du biskutgenug, rap god, alguma white girl music, video do almeida (quem está a cantar), 
- //musica do quim barreiros, musica daquele video de gandia?, alguma musica do espama, musica unicamente instrumental, musica cujo nome é inês (nome da musica) meh?, video do pirinha (autor...), aquela musica do natal que tao sempre a pedir no grupo
-const size = 12; 
+ //sindrome de cidade pequena (primeira palavra do título), rap god (artista), last friday night (Yeah, we danced on ____), video do almeida (quem está a cantar), 
+ //musica do quim barreiros, musica daquele video de gandia?, alguma musica do espama, musica unicamente instrumental (Runaway kanye), video do pirinha (passa-se na noite ___), aquela musica do natal que tao sempre a pedir no grupo (época a que se refere esta musica)
+
+ const size = 12; 
 const sounds_source = ["cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3"]
 const sounds = [];
 for(i = 0; i<sounds_source.length; i++){

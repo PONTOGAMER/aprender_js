@@ -1,7 +1,7 @@
 
 
 
-const connections_base_words = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'] /* Since connections_words is altered, map has to stay the same, so its easier to maintain the original words also */
+const connections_base_words = ['DRAMA QUEEN','VINI','CONDIÇÕES','KIVI','JOGO','CARTÃO','TELEMÓVEL','MEIA','NOME','IDADE','VOZ','ANDAR','AMANDO','CALOS','LISÃO','AULA'] /* Since connections_words is altered, map has to stay the same, so its easier to maintain the original words also */
 
 // Sinónimo de dinis: drama queen, vini, condições, kiwi
 // Cenas desagradaveis de se perder: jogo, cartão, cabelo, meia;
@@ -21,7 +21,7 @@ for(i = 0; i < 16; i++){
     connections_categories.set(connections_base_words[i], Math.floor(i/4) +1)
 }
 
-const connections_categories_styles = [["1", "yellow"],["2", "green"],["3", "blue"],["4", "purple"]]
+const connections_categories_styles = [["DINIS", "rgb(249, 224, 112)"],["COISAS DESAGRADÁVEIS DE SE PERDER", "rgb(162, 197, 94)"],["PARTES DO MENU DE CRIAÇÃO DE PERSONAGENS DO THE SIMS", "rgb(153, 178, 241)"],["NOMES DE PROFESSORES DO SECUNDÁRIO MENOS UMA LETRA", "rgb(190, 115, 197)"]]
 
 solved = JSON.parse(localStorage.getItem("connections_solved"))
 if (solved == null){
@@ -49,7 +49,6 @@ function connections_create_boxes(){
 
 
     for(i = 0; i < solved.length; i++){
-        document.getElementById("connections_text_coiso").style.display = "block";
         var v = document.createElement('a'); 
         v.className = 'connections_solved_cat';
         v.innerHTML = connections_categories_styles[solved[i]][0];
@@ -130,7 +129,8 @@ function connections_click_button(b, animate = false){
         console.log("submit")
         const counts = {};
         var num;
-
+        const submit = document.getElementById("connections_submit");
+        submit.classList.add("disabled_button");
         const elems = document.getElementById('connections_space').querySelectorAll("button");
         for (const elem of elems){
             if (selec.includes(elem.innerHTML)){
@@ -190,10 +190,9 @@ function connections_click_button(b, animate = false){
             await sleep(3000)
             img.style.display = "none"; 
             img.style.opacity = 1;
-
-            
-
         }
+        await sleep(1000)
+        submit.classList.remove("disabled_button")
 
 }
 
@@ -215,7 +214,6 @@ function connections_shuffle(){
 }
 function connections_set_words(){
 
-    console.log(connections_words);
     let elems = document.getElementById('connections_space').querySelectorAll("button");
     let selec_copy = selec.slice();
     for(let i = 0; i < elems.length; i++){
