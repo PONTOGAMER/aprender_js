@@ -25,7 +25,7 @@ for(i = 0; i<sounds_source.length; i++){
 }
 const tips = ["1 Última palavra do título","2 Calças da ___", "3 Yeah, we danced on ___", "4 Quem está a cantar?","5 até ao ___", "6 Nome do artista", "7 Quem está a cantar?", "8 Quem canta esta parte da musica?"];
 const prototype_words = [[4, 1, 9], [25,0, 8], [97, 0, 9], [26, 1, 7],[102, 1, 4], [62, 0,6], [69,1,4], [138,0,4]] ; //first number is start index, second number is 0 for horizontal word and 1 for vertical, third number is length
-const colors = ["Green","Red","Green","Red","Green","Red","Green","Red"];
+const colors = ["rgb(228, 96, 76)","rgb(86, 142, 255)","rgb(255, 206, 253)","rgb(0, 255, 255)","rgb(40, 214, 106)","rgb(255, 179, 75)","rgb(255, 206, 253)","rgb(254, 156, 156)"];
 const words = [];
 prototype_words.forEach((word)=>{
     let temp = [];

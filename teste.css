@@ -325,6 +325,7 @@ body{
     height:360px;
     width:360;
     /* to be ajusted */
+
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(12,1fr);
 
@@ -499,6 +500,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 }
 #fermi_guess_box{
     
@@ -521,6 +524,7 @@ body{
  
     border: 0px;
     outline: none;
+    transition: all 300ms ease-in-out; 
 }
 
 #fermi_submit{
@@ -541,6 +545,7 @@ body{
     background-color: lightgray;
     justify-items: center;
     color: white;
+    transition: all 300ms ease-in-out; 
 }
 #fermi_compare_numbers{
     margin-top: 30px;
@@ -575,6 +580,7 @@ body{
     outline: none;
     text-decoration: none;
     font-size:40px;
+    transition: all 300ms ease-in-out; 
 }
 
 #fermi_graph{
@@ -613,6 +619,7 @@ body{
     font-weight: bold;
     justify-items: center;
     color: white;
+    transition: all 300ms ease-in-out; 
 }
 
 #fermi_final_score{
