@@ -1,3 +1,8 @@
+body.keyboard {
+    height: calc(100% + 500px); /* add padding for keyboard */
+}
+
+
 button {
 	background: none;
 	color: inherit;
@@ -307,7 +312,7 @@ body{
     margin: auto;
     left: 0px;
     right: 0px;
-    top: -50px;
+    top: -150px;
     bottom: 0px; 
     height:360px;
     width:360;
@@ -471,17 +476,21 @@ body{
     width:100vw;
     /*display is difined in javascript*/
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
-    height:150px;
+    height:200px;
     justify-content: center;
     align-items: center;
 
     text-decoration: none;
-    font-size:30px;
+    font-size:23px;
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-weight: bolder;
+    text-align: left;
     color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #fermi_guess_box{
     
@@ -491,6 +500,7 @@ body{
     margin-right: 10%;
     border-radius: 30px;
     height:100px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
     background-color: lightgray;
@@ -501,18 +511,18 @@ body{
     font-weight: bolder;
     color:black;
  
-    border: 1px solid black;
+    border: 0px;
     outline: none;
 }
 
 #fermi_submit{
     position: absolute;
     /*display is difined in javascript*/
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 25px;
     border-radius: 10px;
-    padding: 3px;
+    padding: 5px;
     justify-self:flex-end;
     align-self: flex-end;
 
@@ -522,6 +532,7 @@ body{
     font-weight: bold;
     background-color: lightgray;
     justify-items: center;
+    color: white;
 }
 #fermi_compare_numbers{
     margin-top: 30px;
@@ -545,7 +556,6 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
     
     
     width:90%;
@@ -554,8 +564,6 @@ body{
     /*to be ajusted*/
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-weight: bolder;
-    color:black;
-    border: 1px solid black;
     outline: none;
     text-decoration: none;
     font-size:40px;
@@ -578,16 +586,16 @@ body{
 #fermi_graph_line{
     position:absolute;
     background-color: yellow;
-    width:0.5%;
+    width:2px;
     transition: height 1000ms ;
 }
 #fermi_calculator{
     position: absolute;
     /*display is difined in javascript*/
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-right: 300px;
     border-radius: 10px;
-    padding: 3px;
+    padding: 5px;
     justify-self:flex-end;
     align-self: flex-end;
 
@@ -595,8 +603,8 @@ body{
     text-decoration: none;
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-weight: bold;
-    background-color: lightgray;
     justify-items: center;
+    color: white;
 }
 
 #fermi_final_score{

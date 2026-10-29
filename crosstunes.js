@@ -1,31 +1,31 @@
 
-const grid = [  'S','I','N','D','R','O','M','E',' ',' ',' ',' ',
-                ' ',' ',' ',' ','U',' ',' ','M',' ',' ',' ',' ',
-                ' ',' ','A',' ','N',' ',' ','I',' ',' ',' ',' ',
-                ' ',' ','L',' ','A',' ',' ','N',' ',' ',' ',' ',
-                ' ',' ','D',' ','W',' ',' ','E',' ',' ',' ',' ',
-                ' ',' ','E',' ','A',' ',' ','M',' ',' ',' ',' ',
-                ' ',' ','I',' ','Y',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ','D',' ',' ',' ',' ',' ',' ',' ',' ',' ',
+const grid = [  ' ',' ',' ',' ','B',' ',' ',' ',' ',' ',' ',' ',
+                ' ',' ',' ',' ','E',' ',' ',' ',' ',' ',' ',' ',
+                ' ','Z','A','R','A','K','I','D','S',' ',' ',' ',
+                ' ',' ','L',' ','U',' ',' ',' ',' ',' ',' ',' ',
+                ' ',' ','M',' ','T',' ',' ',' ',' ',' ',' ',' ',
+                ' ',' ','E','M','I','N','E','M',' ','I',' ',' ',
+                ' ',' ','I',' ','F',' ',' ',' ',' ','N',' ',' ',
+                ' ',' ','D',' ','U',' ',' ',' ',' ','E',' ',' ',
                 ' ','T','A','B','L','E','T','O','P','S',' ',' ',
-                ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
-                ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
+                ' ',' ',' ',' ',' ',' ','E',' ',' ',' ',' ',' ',
+                ' ',' ',' ',' ',' ',' ','J',' ',' ',' ',' ',' ',
+                ' ',' ',' ',' ',' ',' ','O','T','I','S',' ',' '
  ]
 
 
- //sindrome de cidade pequena (primeira palavra do título), rap god (artista), last friday night (Yeah, we danced on ____), video do almeida (quem está a cantar), 
- //musica do quim barreiros, musica daquele video de gandia?, alguma musica do espama, musica unicamente instrumental (Runaway kanye), video do pirinha (passa-se na noite ___), aquela musica do natal que tao sempre a pedir no grupo (época a que se refere esta musica)
+ //sindrome de cidade pequena (até ao ___ tejo), doris (quem canta esta parte da musica), rap god (artista), last friday night (Yeah, we danced on ____), video do almeida (quem está a cantar), musica do one direction, (Ultima palavra do título)
+ //video do pirinha (calças da ____ zaraKids), aquela musica do natal que tao sempre a pedir no grupo (quem está a cantar)
 
  const size = 12; 
-const sounds_source = ["cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3"]
+const sounds_source = ["cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3","cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3","cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3","cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3"]
 const sounds = [];
 for(i = 0; i<sounds_source.length; i++){
     sounds.push(new Audio(sounds_source[i]));
 }
-const tips = ["1 blablablaemhjwlhwrkl hjwlkrhjwlkhjwlehjlwj","2 blablabla"];
-const prototype_words = [[1, 0, 9], [4,1, 10]]; //first number is start index, second number is 0 for horizontal word and 1 for vertical, third number is length
-const colors = ["Green","Red"];
+const tips = ["1 Última palavra do título","2 Calças da ___", "3 Yeah, we danced on ___", "4 Quem está a cantar?","5 até ao ___", "6 Nome do artista", "7 Quem está a cantar?", "8 Quem canta esta parte da musica?"];
+const prototype_words = [[4, 1, 9], [25,0, 8], [97, 0, 9], [26, 1, 7],[102, 1, 4], [62, 0,6], [69,1,4], [138,0,4]] ; //first number is start index, second number is 0 for horizontal word and 1 for vertical, third number is length
+const colors = ["Green","Red","Green","Red","Green","Red","Green","Red"];
 const words = [];
 prototype_words.forEach((word)=>{
     let temp = [];
@@ -89,6 +89,24 @@ function crosstunes_move(v, dir){
 }
 
 async function crosstunes_create_boxes(){
+    // Source - https://stackoverflow.com/a/54575847
+// Posted by Scott Boring, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-10-29, License - CC BY-SA 4.0
+
+// focus events don't bubble, must use capture phase
+document.body.addEventListener("focus", event => {
+    const target = event.target;
+    switch (target.tagName) {
+        case "INPUT":
+        case "TEXTAREA":
+        case "SELECT":
+            document.body.classList.add("keyboard");
+    }
+}, true); 
+document.body.addEventListener("blur", () => {
+    document.body.classList.remove("keyboard");
+}, true); 
+
     for(i= 0; i < grid.length; i++){
         let v; 
         if(grid[i] == ' '){
@@ -160,7 +178,7 @@ async function crosstunes_create_boxes(){
     const prev = document.getElementById("crosstunes_previous"); 
     prev.addEventListener("click",()=>{
 
-        crosstunes_change_word((cur_word-1 + words.length)%words.length)
+        crosstunes_change_word((cur_word-1 + words.length)%words.length);
         const next = document.getElementById(words[cur_word][0]); 
         next.focus()
     })

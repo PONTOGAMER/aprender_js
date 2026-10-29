@@ -1,12 +1,13 @@
 
-const questions = ["Quantas chamadas é que o Afonso tem que com o Dinis desde de 19 de Janeiro de 2026 até 28 de Outubro de 2026", "Número de reels já enviados para o grupo 'Tocar nos menores'", "Cena sobre professor"];
+const questions = ["Quantas chamadas é que o Afonso tem que com o Dinis desde de 19 de Janeiro de 2026 até 29 de Outubro de 2026 (contando não atendidas)?", "Quantas músicas é que o Niall Horan já lançou, como artista solo (sem contar participações em grupo musical)? ", "Desde que a professora Carla Carmelo Rosa começou a lecionar aulas teóricas a Eletromagnetismo I no ano letivo 2023/2024, quantos alunos passaram à cadeira?"];
 
 var changing = false;
 
-const answers = [602, 2, 10000];
+const answers = [604, 73, 247];
 
-const colors = ["red", "orange", "green","white"];
-const contrast_color = ["darkred", "brown", "darkgreen", "gray"];
+const colors = ["rgb(255, 94, 58)", "rgb(78, 107, 255)", "rgb(23, 195, 123)","white"];
+const contrast_color = ["rgb(255, 149, 125)", "rgb(138, 157, 255)", "rgb(102, 215, 168)", "gray"];
+const darker_color = ["rgb(188, 59, 30)", "rgb(49, 74, 201)", "rgb(20, 161, 102)", "gray"]
 
 const next_button = ["Pergunta 2", "Pergunta 3", "Resultados"];
 
@@ -73,6 +74,9 @@ function fermi_display(anim){
     const base = document.getElementById("fermi_main_box");
     const hideable_elems = base.querySelectorAll(":scope > .hideable")
     const submit = document.getElementById("fermi_submit");
+
+    submit.style.backgroundColor = darker_color[cur_displayed];
+
     const elems = document
         .getElementById("fermi_mini_nav_bar")
         .querySelectorAll(".fermi_nav_bar_content");
@@ -110,7 +114,8 @@ function fermi_display(anim){
             question.innerHTML = questions[cur_displayed];
             guess_box.style.display = "block";
             submit.innerHTML = "Submit";
-
+            guess_box.style.backgroundColor = contrast_color[cur_displayed];
+            calc.style.backgroundColor = darker_color[cur_displayed];
 
         }else{ //answer
             const compare_numbers = document.getElementById("fermi_compare_numbers");
@@ -118,8 +123,14 @@ function fermi_display(anim){
             guess = document.getElementById("fermi_guess");
             answer = document.getElementById("fermi_answer");
             ratio = document.getElementById("fermi_ratio");
-            guess.innerHTML = "Guess:"+stats[cur_displayed];
-            answer.innerHTML = "Answer:"+answers[cur_displayed];
+            guess.innerHTML = "Guess: "+stats[cur_displayed];
+            guess.style.backgroundColor = contrast_color[cur_displayed];
+            answer.style.backgroundColor = darker_color[cur_displayed];
+            ratio.style.backgroundColor = darker_color[cur_displayed];
+            guess.style.color = "black";
+            answer.style.color = "white";
+            ratio.style.color = "white";
+            answer.innerHTML = "Answer: "+answers[cur_displayed];
             let temp = Number.parseFloat(stats[cur_displayed] / answers[cur_displayed]);
             let digits;
             if(temp <= 0.01 || temp >= 100){
@@ -207,7 +218,7 @@ line.style.height = "190px";},0);
 }
 
 function number_smooth_transition(elem, time, start, end, digits, beforeText, afterText){ //times is in milisencond
-    let step = digits == 2 ? 0.01 : digits == 1 ? 0.1 : 10**((end -start).toString().length -3)
+    let step = digits == 2 ? 0.01 : digits == 1 ? 0.1 : 10**(Math.round(end -start).toString().length -3)
     let interval = time *step / (end -start);
     intervalId = setInterval(()=>{
         elem.innerHTML = beforeText + start.toFixed(digits) + afterText;
