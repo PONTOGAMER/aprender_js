@@ -15,6 +15,14 @@ button {
 
 @font-face { font-family: 'Franklin Gothic Medium'; src: url('FranklinGothic.ttf'); } 
 
+@media (max-height: 500px){
+    #nav_bar{
+        display:none !important;
+    }
+    #crosstunes_buttons_div{
+        top: 77% !important;
+    }
+}
 
 p{
     font-family: 'Franklin Gothic Medium',   Arial, sans-serif;
@@ -312,7 +320,7 @@ body{
     margin: auto;
     left: 0px;
     right: 0px;
-    top: -150px;
+    top: -100px;
     bottom: 0px; 
     height:360px;
     width:360;
@@ -347,7 +355,7 @@ body{
     background-color: yellow !important;
 }
 #crosstunes_buttons_div{
-    top: 65%;
+    top: 70%;
     position: absolute;
 
     width: 100%;
