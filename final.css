@@ -1,0 +1,21 @@
+body{
+    background-color:rgba(210, 200, 255, 0.993);
+    margin: 0px; 
+}
+
+#titulo{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#imagem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#a {
+    width:fit-content;
+    height: 100px;
+}

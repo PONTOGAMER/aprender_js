@@ -1,22 +1,21 @@
 function teste(){
     let result = "";
     if (localStorage.getItem("connections") == '1'){
-        result = result + "A S "
+        result = result + "PA"
     }else{
-        result = result + "_ _ "
+        result = result + "__"
     }
     if (localStorage.getItem("crosstunes") == '1'){
-        result = result + "D F "
+        result = result + "RA"
     }else{
-        result = result + "_ _ "
+        result = result + "__"
     }
     if (localStorage.getItem("mini") == '1'){
-        result = result + "G H"
+        result = result + "BÉNS"
     }else{
-        result = result + "_ _"
+        result = result + "____"
     }    
     document.getElementById("final_button").innerHTML = result;  
-    console.log(result);
 }
 
 function refresh(){
@@ -36,8 +35,8 @@ function finish(arg){
 }
 
 function redirect_final(){
-    if (document.getElementById("final_button").innerHTML == "A S D F G H"){
-        window.location.href = "ASDFGH.html"
+    if (document.getElementById("final_button").innerHTML == "PARABÉNS"){
+        window.location.href = "PARABÉNS.html"
     } 
 }
 

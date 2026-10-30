@@ -1,9 +1,9 @@
 
-const questions = ["Quantas chamadas é que o Afonso tem que com o Dinis desde de 19 de Janeiro de 2026 até 29 de Outubro de 2026 (contando não atendidas)?", "Quantas músicas é que o Niall Horan já lançou, como artista solo (sem contar participações em grupo musical)? ", "Desde que a professora Carla Carmelo Rosa começou a lecionar aulas teóricas a Eletromagnetismo I no ano letivo 2023/2024, quantos alunos reprovaram à cadeira (não conta não avaliados)?"];
+const questions = ["Quantas chamadas é que o Afonso tem que com o Dinis desde de 19 de Janeiro de 2026 até 29 de Outubro de 2026 (contando não atendidas)?", "Quantas músicas têm todos os albuns de Niall Horan? ", "Desde que a professora Carla Carmelo Rosa começou a lecionar aulas teóricas a Eletromagnetismo I no ano letivo 2023/2024, quantos alunos reprovaram à cadeira (não conta não avaliados)?"];
 
 var changing = false;
 
-const answers = [604, 73, 197];
+const answers = [604, 51, 197];
 
 const colors = ["rgb(255, 94, 58)", "rgb(78, 107, 255)", "rgb(23, 195, 123)","white"];
 const contrast_color = ["rgb(255, 149, 125)", "rgb(138, 157, 255)", "rgb(102, 215, 168)", "gray"];
