@@ -14,16 +14,16 @@ const grid = [  ' ',' ',' ',' ','B',' ',' ',' ',' ',' ',' ',' ',
  ]
 
 
- //sindrome de cidade pequena (até ao ___ tejo), doris (quem canta esta parte da musica), rap god (artista), last friday night (Yeah, we danced on ____), video do almeida (quem está a cantar), musica do one direction, (Ultima palavra do título)
+ //sindrome de cidade pequena (até ao ___ tejo), doris (quem canta esta parte da musica), rap god (artista), last friday night (Yeah, we danced on ____), video do almeida (quem está a cantar), musica do one direction, (Ultima palavra do título, mas sem a letra porque senao era facil)
  //video do pirinha (calças da ____ zaraKids), aquela musica do natal que tao sempre a pedir no grupo (quem está a cantar)
 
  const size = 12; 
-const sounds_source = ["cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3","cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3","cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3","cat-laughing-at-you.mp3", "cat-laughing-at-you.mp3"]
+const sounds_source = ["crosstunes_musics/musica1.mp3", "crosstunes_musics/musica2.mp3","crosstunes_musics/musica3.mp3", "crosstunes_musics/musica4.mp3","crosstunes_musics/musica5.mp3", "crosstunes_musics/musica6.mp3","crosstunes_musics/musica7.mp3", "crosstunes_musics/musica8.mp3"]
 const sounds = [];
 for(i = 0; i<sounds_source.length; i++){
     sounds.push(new Audio(sounds_source[i]));
 }
-const tips = ["1 Última palavra do título","2 Calças da ___", "3 Yeah, we danced on ___", "4 Quem está a cantar?","5 até ao ___", "6 Nome do artista", "7 Quem está a cantar?", "8 Quem canta esta parte da musica?"];
+const tips = ["1 Última palavra do título, mas sem a letra porque senao era facil","2 Calças da ___", "3 Yeah, we danced on ___", "4 Quem está a cantar?","5 até ao ___", "6 Nome do artista", "7 Quem está a cantar?", "8 Quem canta esta parte da musica?"];
 const prototype_words = [[4, 1, 9], [25,0, 8], [97, 0, 9], [26, 1, 7],[102, 1, 4], [62, 0,6], [69,1,4], [138,0,4]] ; //first number is start index, second number is 0 for horizontal word and 1 for vertical, third number is length
 const colors = ["rgb(228, 96, 76)","rgb(86, 142, 255)","rgb(255, 206, 253)","rgb(0, 255, 255)","rgb(40, 214, 106)","rgb(255, 179, 75)","rgb(255, 206, 253)","rgb(254, 156, 156)"];
 const words = [];
